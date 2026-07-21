@@ -96,17 +96,20 @@ const db = {
           return u || null;
         }
 
-        // Transactions or other selects by user_id
-        if (/SELECT amount, date FROM transactions WHERE user_id = \? AND status = 'success'/i.test(raw)) {
-          const userId = params[0];
-          return data.transactions.filter(t => t.user_id === userId && t.status === 'success');
-        }
-
-        if (/SELECT \* FROM transactions WHERE user_id = \? ORDER BY date DESC/i.test(raw)) {
-          const userId = params[0];
-          return data.transactions
-            .filter(t => t.user_id === userId)
-            .sort((a, b) => (a.date < b.date ? 1 : -1));
+        // SELECT s.*, p.platform, p.name as plan_name, p.price FROM subscriptions s JOIN plans p ON s.plan_id = p.id WHERE s.id = ? AND s.user_id = ?
+        if (/FROM subscriptions s[\s\S]*JOIN plans p ON s.plan_id = p.id[\s\S]*WHERE s.id = \? AND s.user_id = \?/i.test(raw)) {
+          const [subId, userId] = params;
+          const s = data.subscriptions.find(x => x.id == subId && x.user_id == userId);
+          if (!s) return undefined;
+          const p = data.plans.find(pl => pl.id === s.plan_id) || {};
+          return Object.assign({}, s, {
+            platform: p.platform,
+            plan_name: p.name,
+            price: p.price,
+            screens: p.screens,
+            quality: p.quality,
+            color: p.color
+          });
         }
 
         // Admin revenue sum
@@ -143,6 +146,25 @@ const db = {
         // SELECT * FROM plans
         if (/SELECT \* FROM plans/i.test(raw)) {
           return data.plans;
+        }
+
+        // Transactions list by user_id
+        if (/SELECT \* FROM transactions WHERE user_id = \? ORDER BY date DESC/i.test(raw)) {
+          const userId = params[0];
+          return data.transactions
+            .filter(t => t.user_id === userId)
+            .sort((a, b) => (a.date < b.date ? 1 : -1));
+        }
+
+        // User successful transactions amount and date
+        if (/SELECT amount, date FROM transactions WHERE user_id = \? AND status = 'success'/i.test(raw)) {
+          const userId = params[0];
+          return data.transactions.filter(t => t.user_id === userId && t.status === 'success');
+        }
+
+        // All successful transactions (for admin growth analytics)
+        if (/SELECT amount, date, user_id FROM transactions WHERE status = 'success'/i.test(raw)) {
+          return data.transactions.filter(t => t.status === 'success');
         }
 
         // JOIN subscriptions with plans for a user

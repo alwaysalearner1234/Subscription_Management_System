@@ -586,10 +586,11 @@ interface PaymentPageProps {
   selectedPlan: Plan | null;
   selectedPlatformName: string | null;
   selectedColor: string | null;
+  renewingSubId?: number | null;
   onPaymentSuccess: () => void;
 }
 
-function PaymentPage({ navigate, selectedPlan, selectedPlatformName, selectedColor, onPaymentSuccess }: PaymentPageProps) {
+function PaymentPage({ navigate, selectedPlan, selectedPlatformName, selectedColor, renewingSubId, onPaymentSuccess }: PaymentPageProps) {
   const [method, setMethod] = useState<"upi" | "card" | "wallet">("upi");
   const [processing, setProcessing] = useState(false);
   const [done, setDone] = useState(false);
@@ -641,10 +642,14 @@ function PaymentPage({ navigate, selectedPlan, selectedPlatformName, selectedCol
         await new Promise((resolve) => setTimeout(resolve, 1800));
       }
       
-      await api.checkout(plan.id, paymentMethod);
+      if (renewingSubId) {
+        await api.renew(renewingSubId, paymentMethod);
+      } else {
+        await api.checkout(plan.id, paymentMethod);
+      }
       setProcessing(false);
       setDone(true);
-      toast.success("Transaction completed successfully!");
+      toast.success(renewingSubId ? "Subscription renewed successfully!" : "Transaction completed successfully!");
       setTimeout(() => {
         setDone(false);
         setPaymentRequested(false);
@@ -1420,6 +1425,7 @@ export default function App() {
   const [selectedPlan, setSelectedPlan] = useState<Plan | null>(null);
   const [selectedPlatformName, setSelectedPlatformName] = useState<string | null>(null);
   const [selectedColor, setSelectedColor] = useState<string | null>(null);
+  const [renewingSubId, setRenewingSubId] = useState<number | null>(null);
 
   const [loading, setLoading] = useState(true);
   const unreadCount = notifications.filter((n) => !n.read).length;
@@ -1500,12 +1506,12 @@ export default function App() {
     setSelectedPlan(plan);
     setSelectedPlatformName(platformName);
     setSelectedColor(color);
+    setRenewingSubId(null);
     navigate("payment");
   };
 
   // Renew an expired subscription directly
   const handleRenew = async (sub: Subscription) => {
-    // We can pre-select the appropriate plan from our plans list and direct to payment page
     let matchedPlan: Plan | null = null;
     const platform = plans.find(p => p.platform === sub.platform);
     if (platform) {
@@ -1517,6 +1523,7 @@ export default function App() {
       setSelectedPlan(matchedPlan);
       setSelectedPlatformName(sub.platform);
       setSelectedColor(sub.color);
+      setRenewingSubId(sub.id);
       navigate("payment");
     } else {
       // Fallback: direct to plans
@@ -1596,7 +1603,11 @@ export default function App() {
             selectedPlan={selectedPlan}
             selectedPlatformName={selectedPlatformName}
             selectedColor={selectedColor}
-            onPaymentSuccess={fetchUserData}
+            renewingSubId={renewingSubId}
+            onPaymentSuccess={() => {
+              setRenewingSubId(null);
+              fetchUserData();
+            }}
           />
         )}
         {page === "history" && <HistoryPage transactions={history} />}

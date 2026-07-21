@@ -601,4 +601,10 @@ app.get("*", (req, res, next) => {
 // App listener
 app.listen(PORT, () => {
   console.log(`StreamVault API Server is running on port ${PORT}`);
+}).on("error", (err) => {
+  if (err.code === "EADDRINUSE") {
+    console.log(`StreamVault API Server: Port ${PORT} already bound.`);
+  } else {
+    console.error("Server listen error:", err);
+  }
 });

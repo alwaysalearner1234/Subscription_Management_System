@@ -1,11 +1,38 @@
+# 🎬 OTT Subscription Management System
 
-  # OTT Subscription Management System
+A modern and responsive OTT Subscription Management System that helps users manage their streaming subscriptions in one place. Track active subscriptions, explore plans, and monitor your monthly spending with an intuitive user interface.
 
-  This is a code bundle for OTT Subscription Management System. The original project is available at https://www.figma.com/design/qURN8nsXS3NcJE9Nzffc6R/OTT-Subscription-Management-System.
+## 🎨 Figma Design
 
-  ## Running the code
+Design Reference:  
+https://www.figma.com/design/qURN8nsXS3NcJE9Nzffc6R/OTT-Subscription-Management-System
 
-  Run `npm i` to install the dependencies.
+## 🚀 Getting Started
 
-  Run `npm run dev` to start the development server.
-  
+Install the project dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+The application will be available at:
+
+```text
+http://localhost:5173
+```
+
+## 💻 Tech Stack
+
+- ⚛️ React
+- ⚡ Vite
+- 🎨 Tailwind CSS
+- 🟨 JavaScript
+
+---
+⭐ Feel free to explore, customize, and contribute!

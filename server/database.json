@@ -296,6 +296,20 @@
       "plan_id": 6,
       "status": "Jul 5, 2026",
       "start_date": "Aug 5, 2026"
+    },
+    {
+      "id": 7,
+      "user_id": 1,
+      "plan_id": 2,
+      "status": "Jul 21, 2026",
+      "start_date": "Aug 21, 2026"
+    },
+    {
+      "id": 8,
+      "user_id": 1,
+      "plan_id": 2,
+      "status": "Jul 21, 2026",
+      "start_date": "Aug 21, 2026"
     }
   ],
   "transactions": [
@@ -344,6 +358,24 @@
       "amount": 299,
       "status": "UPI",
       "method": "Jul 5, 2026"
+    },
+    {
+      "id": "TXN821166",
+      "user_id": 1,
+      "platform": "Netflix",
+      "plan": "Basic",
+      "amount": 199,
+      "status": "UPI",
+      "method": "Jul 21, 2026"
+    },
+    {
+      "id": "TXN126541",
+      "user_id": 1,
+      "platform": "Netflix",
+      "plan": "Basic",
+      "amount": 199,
+      "status": "UPI",
+      "method": "Jul 21, 2026"
     }
   ],
   "notifications": [
@@ -382,6 +414,16 @@
       "id": 6,
       "user_id": 1,
       "type": "₹299 charged for Prime Video Annual subscription. Valid till Aug 5, 2026."
+    },
+    {
+      "id": 7,
+      "user_id": 1,
+      "type": "₹199 charged for Netflix Basic subscription. Valid till Aug 21, 2026."
+    },
+    {
+      "id": 8,
+      "user_id": 1,
+      "type": "₹199 charged for Netflix Basic subscription. Valid till Aug 21, 2026."
     }
   ]
 }
