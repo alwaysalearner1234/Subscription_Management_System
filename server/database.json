@@ -1,0 +1,387 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "rahul@example.com",
+      "password": "$2a$10$43jh36wQ4M4rA9xjDJx3M.l1j2dDMzlaNvHFFXQ.rOAaGqorlQ6pC",
+      "first_name": "Rahul",
+      "last_name": "Sharma",
+      "phone": "9876543210",
+      "role": "user",
+      "joined_date": "Jan 15, 2025"
+    },
+    {
+      "id": 2,
+      "email": "admin@streamvault.com",
+      "password": "$2a$10$43jh36wQ4M4rA9xjDJx3M.cycnl7vwzzfKnklc17Ky0j3gtE5k01W",
+      "first_name": "Admin",
+      "last_name": "User",
+      "phone": "9999999999",
+      "role": "admin",
+      "joined_date": "Jan 1, 2025"
+    },
+    {
+      "id": 3,
+      "email": "priya@example.com",
+      "password": "$2a$10$43jh36wQ4M4rA9xjDJx3M.l1j2dDMzlaNvHFFXQ.rOAaGqorlQ6pC",
+      "first_name": "Priya",
+      "last_name": "Patel",
+      "phone": "9876543211",
+      "role": "user",
+      "joined_date": "Feb 3, 2025"
+    },
+    {
+      "id": 4,
+      "email": "arjun@example.com",
+      "password": "$2a$10$43jh36wQ4M4rA9xjDJx3M.l1j2dDMzlaNvHFFXQ.rOAaGqorlQ6pC",
+      "first_name": "Arjun",
+      "last_name": "Kumar",
+      "phone": "9876543212",
+      "role": "user",
+      "joined_date": "Mar 20, 2025"
+    },
+    {
+      "id": 5,
+      "email": "neha@example.com",
+      "password": "$2a$10$43jh36wQ4M4rA9xjDJx3M.l1j2dDMzlaNvHFFXQ.rOAaGqorlQ6pC",
+      "first_name": "Neha",
+      "last_name": "Singh",
+      "phone": "9876543213",
+      "role": "user",
+      "joined_date": "Apr 7, 2025"
+    },
+    {
+      "id": 6,
+      "email": "vikram@example.com",
+      "password": "$2a$10$43jh36wQ4M4rA9xjDJx3M.l1j2dDMzlaNvHFFXQ.rOAaGqorlQ6pC",
+      "first_name": "Vikram",
+      "last_name": "Nair",
+      "phone": "9876543214",
+      "role": "user",
+      "joined_date": "May 12, 2025"
+    },
+    {
+      "id": 7,
+      "email": "indrasenat341@gmail.com",
+      "password": "$2a$10$YnLP9NSupYZq3g/7xdNrUuP4s.3d12PpCtw7OSpkl/z5TLfwuhzDS",
+      "first_name": "indra",
+      "last_name": "sena",
+      "phone": "9392844165",
+      "role": "Jul 3, 2026"
+    }
+  ],
+  "plans": [
+    {
+      "id": 1,
+      "platform": "Netflix",
+      "name": "Mobile",
+      "price": 149,
+      "screens": 1,
+      "quality": "HD",
+      "downloads": 0,
+      "popular": 0,
+      "color": "#E50914",
+      "bg_color": "rgba(229,9,20,0.08)"
+    },
+    {
+      "id": 2,
+      "platform": "Netflix",
+      "name": "Basic",
+      "price": 199,
+      "screens": 1,
+      "quality": "Full HD",
+      "downloads": 0,
+      "popular": 0,
+      "color": "#E50914",
+      "bg_color": "rgba(229,9,20,0.08)"
+    },
+    {
+      "id": 3,
+      "platform": "Netflix",
+      "name": "Standard",
+      "price": 499,
+      "screens": 2,
+      "quality": "Full HD",
+      "downloads": 1,
+      "popular": 0,
+      "color": "#E50914",
+      "bg_color": "rgba(229,9,20,0.08)"
+    },
+    {
+      "id": 4,
+      "platform": "Netflix",
+      "name": "Premium 4K",
+      "price": 649,
+      "screens": 4,
+      "quality": "4K Ultra HD",
+      "downloads": 1,
+      "popular": 1,
+      "color": "#E50914",
+      "bg_color": "rgba(229,9,20,0.08)"
+    },
+    {
+      "id": 5,
+      "platform": "Prime Video",
+      "name": "Monthly",
+      "price": 179,
+      "screens": 3,
+      "quality": "Full HD",
+      "downloads": 1,
+      "popular": 0,
+      "color": "#00A8E0",
+      "bg_color": "rgba(0,168,224,0.08)"
+    },
+    {
+      "id": 6,
+      "platform": "Prime Video",
+      "name": "Annual",
+      "price": 299,
+      "screens": 3,
+      "quality": "4K",
+      "downloads": 1,
+      "popular": 1,
+      "color": "#00A8E0",
+      "bg_color": "rgba(0,168,224,0.08)"
+    },
+    {
+      "id": 7,
+      "platform": "Disney+ Hotstar",
+      "name": "Mobile",
+      "price": 149,
+      "screens": 1,
+      "quality": "HD",
+      "downloads": 1,
+      "popular": 0,
+      "color": "#113CCF",
+      "bg_color": "rgba(17,60,207,0.08)"
+    },
+    {
+      "id": 8,
+      "platform": "Disney+ Hotstar",
+      "name": "Super",
+      "price": 299,
+      "screens": 2,
+      "quality": "Full HD",
+      "downloads": 1,
+      "popular": 1,
+      "color": "#113CCF",
+      "bg_color": "rgba(17,60,207,0.08)"
+    },
+    {
+      "id": 9,
+      "platform": "Disney+ Hotstar",
+      "name": "Ultra",
+      "price": 499,
+      "screens": 4,
+      "quality": "4K",
+      "downloads": 1,
+      "popular": 0,
+      "color": "#113CCF",
+      "bg_color": "rgba(17,60,207,0.08)"
+    },
+    {
+      "id": 10,
+      "platform": "SonyLIV",
+      "name": "Lite",
+      "price": 99,
+      "screens": 1,
+      "quality": "HD",
+      "downloads": 0,
+      "popular": 0,
+      "color": "#F5A623",
+      "bg_color": "rgba(245,166,35,0.08)"
+    },
+    {
+      "id": 11,
+      "platform": "SonyLIV",
+      "name": "Premium",
+      "price": 299,
+      "screens": 2,
+      "quality": "Full HD",
+      "downloads": 1,
+      "popular": 1,
+      "color": "#F5A623",
+      "bg_color": "rgba(245,166,35,0.08)"
+    },
+    {
+      "id": 12,
+      "platform": "SonyLIV",
+      "name": "Premium+",
+      "price": 499,
+      "screens": 4,
+      "quality": "4K",
+      "downloads": 1,
+      "popular": 0,
+      "color": "#F5A623",
+      "bg_color": "rgba(245,166,35,0.08)"
+    },
+    {
+      "id": 13,
+      "platform": "Zee5",
+      "name": "Monthly",
+      "price": 99,
+      "screens": 2,
+      "quality": "HD",
+      "downloads": 1,
+      "popular": 0,
+      "color": "#6B0DAD",
+      "bg_color": "rgba(107,13,173,0.08)"
+    },
+    {
+      "id": 14,
+      "platform": "Zee5",
+      "name": "Annual",
+      "price": 499,
+      "screens": 4,
+      "quality": "Full HD",
+      "downloads": 1,
+      "popular": 1,
+      "color": "#6B0DAD",
+      "bg_color": "rgba(107,13,173,0.08)"
+    },
+    {
+      "id": 15,
+      "platform": "Zee5",
+      "name": "Family",
+      "price": 699,
+      "screens": 6,
+      "quality": "4K",
+      "downloads": 1,
+      "popular": 0,
+      "color": "#6B0DAD",
+      "bg_color": "rgba(107,13,173,0.08)"
+    }
+  ],
+  "subscriptions": [
+    {
+      "id": 1,
+      "user_id": 1,
+      "plan_id": 4,
+      "status": "active",
+      "start_date": "Jul 15, 2025",
+      "renewal_date": "Aug 15, 2025"
+    },
+    {
+      "id": 2,
+      "user_id": 1,
+      "plan_id": 6,
+      "status": "active",
+      "start_date": "Dec 3, 2024",
+      "renewal_date": "Dec 3, 2025"
+    },
+    {
+      "id": 3,
+      "user_id": 7,
+      "plan_id": 1,
+      "status": "Jul 3, 2026",
+      "start_date": "Aug 3, 2026"
+    },
+    {
+      "id": 4,
+      "user_id": 7,
+      "plan_id": 6,
+      "status": "Jul 3, 2026",
+      "start_date": "Aug 3, 2026"
+    },
+    {
+      "id": 5,
+      "user_id": 1,
+      "plan_id": 1,
+      "status": "Jul 3, 2026",
+      "start_date": "Aug 3, 2026"
+    },
+    {
+      "id": 6,
+      "user_id": 1,
+      "plan_id": 6,
+      "status": "Jul 5, 2026",
+      "start_date": "Aug 5, 2026"
+    }
+  ],
+  "transactions": [
+    {
+      "id": "TXN001",
+      "user_id": 1,
+      "platform": "Netflix",
+      "plan": "Premium 4K",
+      "amount": 649,
+      "status": "success",
+      "method": "UPI",
+      "date": "Jul 1, 2025"
+    },
+    {
+      "id": "TXN313554",
+      "user_id": 7,
+      "platform": "Netflix",
+      "plan": "Mobile",
+      "amount": 149,
+      "status": "UPI",
+      "method": "Jul 3, 2026"
+    },
+    {
+      "id": "TXN190545",
+      "user_id": 7,
+      "platform": "Prime Video",
+      "plan": "Annual",
+      "amount": 299,
+      "status": "UPI",
+      "method": "Jul 3, 2026"
+    },
+    {
+      "id": "TXN584563",
+      "user_id": 1,
+      "platform": "Netflix",
+      "plan": "Mobile",
+      "amount": 149,
+      "status": "WALLET",
+      "method": "Jul 3, 2026"
+    },
+    {
+      "id": "TXN894609",
+      "user_id": 1,
+      "platform": "Prime Video",
+      "plan": "Annual",
+      "amount": 299,
+      "status": "UPI",
+      "method": "Jul 5, 2026"
+    }
+  ],
+  "notifications": [
+    {
+      "id": 1,
+      "user_id": 1,
+      "type": "warning",
+      "title": "Subscription Expiring Soon",
+      "message": "Your Disney+ Hotstar Super plan expires in 7 days on Jul 28, 2025. Renew now to avoid interruption.",
+      "time": "2 hours ago",
+      "read": 0
+    },
+    {
+      "id": 2,
+      "user_id": 7,
+      "read": 1
+    },
+    {
+      "id": 3,
+      "user_id": 7,
+      "type": "₹149 charged for Netflix Mobile subscription. Valid till Aug 3, 2026.",
+      "read": 1
+    },
+    {
+      "id": 4,
+      "user_id": 7,
+      "type": "₹299 charged for Prime Video Annual subscription. Valid till Aug 3, 2026.",
+      "read": 1
+    },
+    {
+      "id": 5,
+      "user_id": 1,
+      "type": "₹149 charged for Netflix Mobile subscription. Valid till Aug 3, 2026."
+    },
+    {
+      "id": 6,
+      "user_id": 1,
+      "type": "₹299 charged for Prime Video Annual subscription. Valid till Aug 5, 2026."
+    }
+  ]
+}
