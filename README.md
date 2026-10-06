@@ -7,6 +7,8 @@ A modern and responsive OTT Subscription Management System that helps users mana
 Design Reference:  
 https://www.figma.com/design/qURN8nsXS3NcJE9Nzffc6R/OTT-Subscription-Management-System
 
+Live Demo : https://youtu.be/ogPdLB4IBQs?si=NaAV5ZXtzrCkG2KK
+
 ## 🚀 Getting Started
 
 Install the project dependencies:
